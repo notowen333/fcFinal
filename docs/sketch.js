@@ -34,15 +34,21 @@ function draw() {
 
     const sentence = phraseBool ? sentences[0] : sentences[1];
     phraseBool = !phraseBool;
-
+    const timeoutMs = 1000
     let [x, y] = [mouseX, mouseY]
+
+
+    //set spacing between chars and fontSize
+    jitterDist = jitterDistGen()
+    fontSize = jitterDistGen()
+    textSize(fontSize);
 
     for (var i = 0; i < sentence.length; i += 1) {
 
         utfKey = sentence.charCodeAt(i);
         let letter = char(utfKey);
-        x += jitterDistGen()
-        setTimeout(drawLetter(letter, x, y), 1000);
+        x += jitterDist
+        setTimeout(drawLetter(letter, x, y), timeoutMs);
 
     }
 
