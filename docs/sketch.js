@@ -66,7 +66,7 @@ function queueClearingRect(x,origX, y, fontSize) {
 
     
     const width = x - origX
-    setTimeout(() => rect(origX - 6, y - 8, width + 11, fontSize + 14 ), 6000)
+    setTimeout(() => rect(origX - 6, y - 8, width + 12, fontSize + 15 ), rectTimeGen())
 
 }
 
@@ -80,6 +80,10 @@ function drawLetter(let, xPos, yPos) {
  */
 function jitterDistGen() {
     return 10 + Math.floor(Math.random() * 21)
+}
+
+function rectTimeGen() {
+    return 4000 + Math.floor(Math.random() * 5000)
 }
 
 
