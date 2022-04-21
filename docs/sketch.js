@@ -86,7 +86,7 @@ function rectTimeGen() {
 }
 
 
-function keyPressed() {
+function resetAndFlip() {
 
     backgroundBool = !backgroundBool;
     if (backgroundBool) {
@@ -111,4 +111,13 @@ function keyPressed() {
         }
       }, 0);
 
+}
+
+
+function keyPressed() {
+   resetAndFlip();
+}
+
+function mouseClicked() {
+    reseetAndFlip();
 }
