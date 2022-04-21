@@ -14,7 +14,7 @@ let fontSize = 20;
 function preload() {
  font = loadFont('assets/Roboto/Roboto-Light.ttf');
  phraseBool = true;
- backgroundBool = true;
+ backgroundBool = true; 
  sentences = ['I am the purpose of creation', 'I am but dust and ashes']
 }
 
