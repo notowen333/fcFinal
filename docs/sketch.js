@@ -36,6 +36,7 @@ function draw() {
     phraseBool = !phraseBool;
     const timeoutMs = 1000
     let [x, y] = [mouseX, mouseY]
+    let origX = x
 
 
     //set spacing between chars and fontSize
@@ -52,7 +53,20 @@ function draw() {
 
     }
 
+    // queue clearing rectangle
+    queueClearingRect(x, origX, y, fontSize)
+
 }
+
+
+function queueClearingRect(x,origX, y, fontSize) {
+
+    
+    const width = x - origX
+    setTimeout(() => rect(origX - 6, y - 8, width + 11, fontSize + 14 ), 6000)
+
+}
+
 
 function drawLetter(let, xPos, yPos) {
     text(let, xPos, yPos);
@@ -77,5 +91,11 @@ function keyPressed() {
         background('black');
         fill('white')
     }
+
+    const highestId = window.setTimeout(() => {
+        for (let i = highestId; i >= 0; i--) {
+          window.clearInterval(i);
+        }
+      }, 0);
 
 }
