@@ -14,7 +14,7 @@ let fontSize = 20;
 function preload() {
  font = loadFont('assets/Roboto/Roboto-Light.ttf');
  phraseBool = true;
- backgroundBool = true; 
+ backgroundBool = false; 
  sentences = ['I am the purpose of creation', 'I am but dust and ashes']
 }
 
@@ -26,7 +26,9 @@ function setup() {
     textSize(fontSize);
     textAlign(CENTER, CENTER);
     frameRate(1);
-    fill('black');
+    fill('white');
+    stroke('white');
+    background('black');
 
 }
 
@@ -87,12 +89,15 @@ function keyPressed() {
     if (backgroundBool) {
         background('white')
         fill('black')
+        stroke('black')
     }
     else {
         background('black');
         fill('white')
+        stroke('white')
     }
 
+    // clear queued rects
     const highestId = window.setTimeout(() => {
         for (let i = highestId; i >= 0; i--) {
           window.clearInterval(i);
