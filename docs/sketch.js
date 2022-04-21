@@ -8,7 +8,6 @@
 
 var charCtr = 35
 let font, phraseBool, sentences, backgroundBool;
-let fontSize = 20;
 
 
 function preload() {
@@ -23,13 +22,13 @@ function setup() {
 
     createCanvas(windowWidth, windowHeight);
     textFont(font);
-    textSize(fontSize);
     textAlign(CENTER, CENTER);
     frameRate(1);
     fill('white');
     stroke('white');
     background('black');
-
+    textSize(12);
+    text('OK', windowWidth - 20, windowHeight - 20);
 }
 
 function draw() {
@@ -94,11 +93,15 @@ function keyPressed() {
         background('white')
         fill('black')
         stroke('black')
+        textSize(12);
+        text('OK', windowWidth - 20, windowHeight - 20);
     }
     else {
         background('black');
         fill('white')
         stroke('white')
+        textSize(12);
+        text('OK', windowWidth - 20, windowHeight - 20);
     }
 
     // clear queued rects
