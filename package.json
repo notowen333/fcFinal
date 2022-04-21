@@ -1,0 +1,27 @@
+{
+  "name": "fcfinal",
+  "version": "1.0.0",
+  "description": "Drawing machine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notowen333/fcFinal.git"
+  },
+  "keywords": [
+    "Generative",
+    "art"
+  ],
+  "author": "Owen Kaplan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/notowen333/fcFinal/issues"
+  },
+  "homepage": "https://github.com/notowen333/fcFinal#readme",
+  "dependencies": {
+    "http-server": "^14.1.0",
+    "p5": "^1.4.1"
+  }
+}
