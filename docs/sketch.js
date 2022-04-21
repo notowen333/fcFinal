@@ -26,6 +26,7 @@ function setup() {
     textSize(fontSize);
     textAlign(CENTER, CENTER);
     frameRate(1);
+    fill('black');
 
 }
 
