@@ -119,5 +119,5 @@ function keyPressed() {
 }
 
 function mouseClicked() {
-    reseetAndFlip();
+    resetAndFlip();
 }
