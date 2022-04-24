@@ -1,4 +1,4 @@
 # fcFinal
 Drawing Machine
 
-index.html is the entry point with the first drawing machine.
+Uses p5.js to draw to the screen. Hosted at iamthepurposeofcreation.com via Netlify.
