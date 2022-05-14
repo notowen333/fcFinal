@@ -33,13 +33,11 @@ function setup() {
 
 function draw() {
 
-
     const sentence = phraseBool ? sentences[0] : sentences[1];
     phraseBool = !phraseBool;
     const timeoutMs = 1000
     let [x, y] = [mouseX, mouseY]
     let origX = x
-
 
     //set spacing between chars and fontSize
     jitterDist = jitterDistGen()
@@ -63,7 +61,6 @@ function draw() {
 
 function queueClearingRect(x,origX, y, fontSize) {
 
-    
     const width = x - origX
     setTimeout(() => rect(origX - 6, y - 8, width + 12, fontSize + 15 ), rectTimeGen())
 
@@ -113,11 +110,13 @@ function resetAndFlip() {
 
 }
 
-
+// stop drawing when a key is pressed
 function keyPressed() {
-   resetAndFlip();
+    noLoop();
 }
 
+// flip color scheme and start drawing when mouse is clicked
 function mouseClicked() {
     resetAndFlip();
+    loop();
 }
